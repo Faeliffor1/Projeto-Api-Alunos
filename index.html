@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APITEST</title>
+  <link rel="stylesheet" href="./Style.css">
+  <script src="./script.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #333; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th { background-color: #f4f4f4; }
+    .alerta { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Notas e Frequência</h1>
+    <form>
+      <input type="text" class="nome" id="nome" name="nome" placeholder="Nome" required>
+      <input type="number" class="Portugues" id="Portugues" name="Portugues" placeholder="Nota Português">
+      <input type="number" class="Matematica" id="Matematica" name="Matematica" placeholder="Nota Matemática">
+      <input type="number" class="Ciencias" id="Ciencias" name="Ciencias" placeholder="Nota Ciências">
+      <input type="number" class="Geografia" id="Geografia" name="Geografia" placeholder="Nota Geografia">
+      <input type="number" class="História" id="História" name="História" placeholder="Nota História">
+      <label for="frequencia">Frequência:</label>
+      <input type="number" class="frequencia" id="frequencia" name="frequencia" min="0" max="100"> %
+      <button type="submit">Lançar ao sistema</button>
+    </form>
+  </div>
+
+  <h1>📊 Relatório da Turma</h1>
+
+  <h2>Média geral da turma</h2>
+  <p id="mediaTurma"></p>
+
+  <h2>Média da turma por disciplina</h2>
+  <ul id="mediasDisciplinas"></ul>
+
+  <h2>Alunos acima da média da turma</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Média Individual</th>
+      </tr>
+    </thead>
+    <tbody id="acimaMedia"></tbody>
+  </table>
+
+  <h2>Alunos com frequência baixa (&lt; 75%)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Frequência</th>
+      </tr>
+    </thead>
+    <tbody id="freqBaixa"></tbody>
+  </table>
+</body>
+</html>
